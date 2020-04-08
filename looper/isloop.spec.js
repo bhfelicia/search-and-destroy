@@ -1,4 +1,4 @@
-'use strict';
+	'use strict';
 const {expect} = require('chai');
 const LinkedList = require('./linkedlist');
 const isLoop = require('./isloop');
@@ -12,7 +12,10 @@ const emojis = ['🥚','🐣','🦅 ', '👾'];
 const test1 = new LinkedList();
 test1.addToHead(0)
 numbers.forEach(val => test1.addToTail(val));
-test1.getNthNode(6).next = test1.getNthNode(3);
+test1.getNthNode(6).next = test1.getNthNode(3)
+// console.log(test1)
+// console.log(test1.getNthNode(0));
+// console.log(test1.tail)
 
 const test2 = new LinkedList();
 test2.addToHead('z');
@@ -25,7 +28,7 @@ test3.addToHead('📺');
 emojis.forEach(el => test3.addToTail(el))
 
 describe('isLoop function', () => {
-	
+
 	// Feel free to write a few tests of your own! :)
 	it('returns true if linked list contains a loop', () =>{
 		expect(isLoop(test1)).to.equal(true);

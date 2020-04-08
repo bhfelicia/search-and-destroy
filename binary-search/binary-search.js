@@ -6,7 +6,6 @@ const binarySearch = (array, target) => {
     return false;
   }
   if (array.length === 1) {
-    console.log(array[0]);
     if (array[0] === target) {
       return true;
     } else {
@@ -17,16 +16,12 @@ const binarySearch = (array, target) => {
   const midpointIdx = Math.floor(array.length / 2);
 
   if (target === array[midpointIdx]) {
-    console.log(array[midpointIdx]);
-    console.log(target);
     return true;
   } else if (target < array[midpointIdx]) {
     const lesserHalf = array.slice(0, midpointIdx);
-    console.log("lesserHalf is :", lesserHalf);
     return binarySearch(lesserHalf, target);
   } else {
     const greaterHalf = array.slice(midpointIdx);
-    console.log("greaterHalf is :", greaterHalf);
     return binarySearch(greaterHalf, target);
   }
 };
